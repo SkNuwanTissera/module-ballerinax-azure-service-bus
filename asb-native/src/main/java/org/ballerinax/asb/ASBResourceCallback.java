@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ * Copyright (c) 2021, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
  *
  * WSO2 Inc. licenses this file to you under the Apache License,
  * Version 2.0 (the "License"); you may not use this file except
@@ -16,7 +16,7 @@
  * under the License.
  */
 
-package org.ballerinalang.asb;
+package org.ballerinax.asb;
 
 import io.ballerina.runtime.api.async.Callback;
 import io.ballerina.runtime.api.values.BError;
@@ -29,6 +29,7 @@ public class ASBResourceCallback implements Callback {
     public void notifySuccess(Object obj) {
         // do nothing
     }
+
     @Override
     public void notifyFailure(BError error) {
         // do nothing
