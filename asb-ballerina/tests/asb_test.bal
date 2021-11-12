@@ -71,6 +71,25 @@ AsbConnectionConfiguration config = {
     groups: ["asb"],
     enable: true
 }
+function testXXX() returns error? {
+    log:printInfo("!!!!!!!!!!!!!!!!!!!!!!!!!");
+    ManagementClient managementClient = new (connectionString);
+
+    NamespaceInfo namespaceInfo = check managementClient->getNamespaceInfo();
+    log:printInfo(namespaceInfo.name.toString());
+
+    MessageCountDetails messageCountDetails = check managementClient->getMessageCountDetailsOfQueue("myqueue");
+    log:printInfo(messageCountDetails.activeMessageCount.toString());
+    log:printInfo(messageCountDetails.deadLetterMessageCount.toString());
+    log:printInfo(messageCountDetails.scheduledMessageCount.toString());
+    log:printInfo(messageCountDetails.transferMessageCount.toString());
+    log:printInfo(messageCountDetails.transferDeadLetterMessageCount.toString());
+}
+
+@test:Config { 
+    groups: ["asb"],
+    enable: true
+}
 function testSendAndReceiveMessageFromQueueOperation() returns error? {
     log:printInfo("[[testSendAndReceiveMessageFromQueueOperation]]");
 

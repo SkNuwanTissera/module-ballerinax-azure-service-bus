@@ -72,4 +72,7 @@ public class ASBConstants {
     public static final String UNCHECKED = "unchecked";
     // Error constant fields
     static final String ASB_ERROR = "AsbError";
+    // Management client constants
+    public static final String NAMESPACE_RECORD = "NamespaceInfo";
+    public static final String MESSAGE_COUNT_DETAILS_RECORD = "MessageCountDetails";
 }

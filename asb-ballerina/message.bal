@@ -69,3 +69,16 @@ public type ApplicationProperties record {|
     @display {label: "Properties"}
     map<string> properties?;
 |};
+
+
+public type NamespaceInfo record {|
+    string name?;
+|};
+
+public type MessageCountDetails record {|
+    float activeMessageCount?;
+    float deadLetterMessageCount?;
+    float scheduledMessageCount?;
+    float transferMessageCount?;
+    float transferDeadLetterMessageCount?;
+|};
